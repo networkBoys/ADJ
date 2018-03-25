@@ -1,0 +1,18 @@
+Nama:Hagel Bagustiawan S
+NIM:161402093
+
+1.Download mininet
+2.Import ke VirtualBox
+3.Setting konfigurasi networknya agar bisa berkomunikasi nantinya, lalu lakukan postforwarding
+4.Run mininetnya, login dengan username 'mininet' dan password 'mininet'
+5.Berikan perintah "ifconfig -a" untuk mengetahui ip address host.
+6.Aktifkan Xming, xming adalah sebuah server yg kita gunakan untuk mengakses ssh x11 untuk windows os.
+7.Aktifkan PuTTY dengan cara membuka command line->directory file ke tempat anda menyimpan PuTTY.exe-> berikan perintah
+'putty.exe -X -P 2222 -l <username> localhost'->jika koneksi ssh berhasil maka akan muncul terminal baru,
+ login dengan username dan password di langkah 4-> ketik 'xterm' lalu enter maka akan muncul terminal baru berwarna putih
+(Xterminal). PuTTY adalah terminal emulator, serial console dan aplikasi transfer file jaringan.
+8.akses via SSH di Xterminal.
+9.test wireshark.
+
+
+~End
