@@ -1,0 +1,9 @@
+1.install miniNAM dengan command 'git clone https://github.com/uccmisl/MiniNAM.git', pada gambar tersebut saya sudah
+menginstallnya sebelumnya dan lupa di screenshoot, jadi saya screenshoot directory saya untuk membuktikan bahwa miniNAM
+telah terinstall
+2.install python imaging, pada gambar 2.1 saya menggunakan perintah 'sudo apt-get install python-imaging' sesuai dengan
+petunjuk di website "https://www.ucc.ie/en/misl/research/software/mininam/". lalu di gambar 2.2 saya menggunakan perintah
+'sudo apt-get install git python-imaging python-imaging-tk' sesuai dengan panduan di "ADMINISTRASI & DESAIN JARINGAN.pdf".
+3.run miniNAM dengan cara akses ke direktori MiniNAM lalu berikan perintah 'sudo python MiniNAM.py', maka GUI MiniNAM akan
+muncul dengan setting default, lalu saya lakukan ping dari host 1 ke host 2 dengan perintah 'h1 ping -c2 h2' pada CLI
+mininet.
