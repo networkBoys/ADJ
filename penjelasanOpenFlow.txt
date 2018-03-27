@@ -1,0 +1,13 @@
+1.buat 3 host 1 switch topology dgn perintah yg ada pada gambar
+2.tambah openvswitch flow ke topology dgn perintah yg ada pada gambar
+3.buka wireshark dengan perintah 'sudo wireshark &'
+3.1. buka capture interface dan pilih lo -> start
+4.membuat referensi OF controller 
+5.filter of pada wireshark -> apply
+6.inspect packet
+6.1.inspect packet
+7.filter of and not(of10.echo_request.type or of10.echo_reply.type) setelah h1 ping h2
+8.flow entries
+9.Benchmark kernel- vs -user space
+
+~end
