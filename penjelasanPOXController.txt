@@ -1,0 +1,24 @@
+1.POXController files pada mininet
+1.2. of_tutorial.py pada pox/pox/misc
+2.memulai pox controller dengan './pox.py log.level --DEBUG misc.of_tutorial pada directory pox'. lalu mulai
+membuat network pada terminal lain dengan perintah 'sudo mn --topo single,3 --mac --witch ovsk --controller remote'.
+jika pox controller terhubung, akan muncul 'INFO:openflow.of_01:[00-00-00-00-00-01 2] connected' pada terminal poxcontroller. 
+lalu mulailah membuka terminal untuk node 1,2, dan 3 dengan perintah 'xterm h1 h2 h3' pada console jaringan.
+akan muncul 3 terminal untuk masing-masing node.
+2.1 & 2.2. berikan perintah 'tcpdump -XX -n -i h2-eth0 > h2.txt' pada terminal node 2, dan 'tcpdump -XX -n -i h3-eth0 > h3.txt'
+pada terminal node 3, perintah tersebut memerintahkan terminal node untuk merekam aktivitas node dan menyimpannya pada file
+h2.txt dan h3.txt. Lalu lakukan ping pada terminal node 1 dengan perintah 'ping -c1 10.0.0.2'.
+lalu hentikan perintah merekam aktivitas node 2 dan 3 dengan menekan tombol ctrl+c. lalu buka file h2.txt dan h3.txt
+untuk melihat hasil dari perintah 'ping -c1 10.0.0.2' tadi.
+2.3. berikan perintah merekam aktivitas node lagi pada node 2 dan 3. lalu kali ini kita mencoba melakukan ping ke
+ip yg tidak ada, disini contohnya 10.0.0.5. lalu buka h2.txt dan h3.txt maka hasilnya akan seperti gambar, ip 10.0.0.1
+merequest who has 10.0.05? sampai 3 kali dan tidak menemukannya.
+3.Tampilan jaringan yg kita buat tadi pada MiniNAM ketika ping dari 10.0.0.1 ke 10.0.0.2. terlihat ada komunikasi antara
+host 1 dan 2.
+3.1 Tampilan jaringan yg kita buat tadi pada MiniNAM ketika ping dari 10.0.0.1 ke 10.0.0.5. terlihat tidak ada komunikasi
+antar host.
+4.disini kita akan melakukan perbandingan antara kecepatan menggunakan hub dan switch. berikan perintah iperf pada console.
+4.1. switch lebih cepat daripada hub.
+5. disini kita menambahkan fungsi act_like_switch ke of_tutorial.py. saya menggunakan vim editor, vim sudah ada pada mininet,
+jadi cukup ketikkan perintah 'vi of_tutorial.py' pada directory  pox/pox/misc. anda bisa melihat cara penggunaan vim editor
+di https://vim.rtorr.com/. ubah source code sesuai di gambar, save lalu exit.
